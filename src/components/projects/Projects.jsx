@@ -17,8 +17,7 @@ const Projects = () => {
                         description="A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."
                         techno1="React"
                         techno2="SCSS"
-                        code="#"
-                        demo="#"
+                        code="https://github.com/NicoloGalinato/portfolio_react-js.git"
                         scrollY="-83%"
                         cName="reversed-proj"
                     />
