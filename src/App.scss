@@ -1,0 +1,89 @@
+/* SCSS Layouts */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-bg);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.gradient__bg {
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradient_text 15s ease infinite;
+}
+
+@keyframes gradient_text {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// Default section and content mode
+
+.section__padding {
+    padding: 0rem 6rem;
+}
+
+.content__padding {
+    padding: 10rem 6rem;
+}
+
+.margin__section {
+    margin: 6rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .section__padding {
+        padding: 0rem 4rem;
+    }
+    .content__padding {
+        padding: 6rem 4rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .section__padding {
+        padding: 0rem 2rem;
+    }
+    .content__padding {
+        padding: 10rem 2rem;
+    }
+}

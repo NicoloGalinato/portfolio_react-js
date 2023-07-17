@@ -1,0 +1,122 @@
+.pf__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--color-bg);
+
+    .pf__navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        cursor: pointer;
+
+        img {
+            max-width: 40px;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: var(--color-maintext);
+        }
+    }
+
+    .pf__navbar-links {
+        display: flex;
+        gap: 1.5rem;
+
+        color: var(--color-maintext);
+        list-style: none;
+
+        .pf__navbar-links_items {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background: var(--gradient-text);
+                transform: scaleX(0);
+                transition: transform 0.5s ease;
+                transform-origin: right;
+            }
+
+            &:hover {
+                color: var(--gradient-text);
+                cursor: pointer;
+
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+
+    .pf__navbar-menu {
+        display: none;
+    }
+
+    @media screen and (max-width: 800px) {
+        .pf__navbar-links {
+            position: absolute;
+            top: 80px;
+            left: -100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 1.5rem 0;
+            width: 100%;
+            background: var(--color-bg);
+            transition: all 0.5s ease-in;
+        }
+
+        .pf__navbar-links__active {
+            left: 0;
+        }
+
+        .pf__navbar-menu {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .pf__navbar-logo {
+            img {
+                width: 45px;
+                transition: all 0.5s ease-in;
+            }
+
+            h3 {
+                font-size: 16px;
+                transition: all 0.5s ease-in;
+            }
+        }
+
+        .pf__navbar-menu {
+            .icons {
+                width: 23px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .pf__navbar-logo {
+            h3 {
+                display: none;
+            }
+        }
+    }
+}
