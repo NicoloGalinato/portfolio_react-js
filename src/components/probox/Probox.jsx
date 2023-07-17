@@ -35,9 +35,9 @@ function ProBox({ title, img, description, techno1, techno2, code, demo, scrollY
                         <a target="_blank" href={code} rel="noreferrer">
                             Code <i className="fa-brands fa-github"></i>
                         </a>
-                        <a target="_blank" href={demo} rel="noreferrer">
+                        {/* <a target="_blank" href={demo} rel="noreferrer">
                             Live Demo <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
